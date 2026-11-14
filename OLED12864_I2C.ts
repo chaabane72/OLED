@@ -185,6 +185,7 @@ namespace OLED12864_I2C {
   //% blockId="OLED12864_I2C_PIXEL" block="Placer pixel x %x y %y couleur %color"
   //% weight=70 blockGap=8
   //% parts=OLED12864_I2C trackArgs=0
+  //% inlineInputMode=inline
   export function pixel(x: number, y: number, color: number = 1) {
     let page = y >> 3;
     let shift_page = y % 8;
@@ -216,6 +217,7 @@ namespace OLED12864_I2C {
   //% blockId="OLED12864_I2C_SHOWSTRING" block="Afficher texte x %x y %y texte %s couleur %color"
   //% weight=80 blockGap=8
   //% parts=OLED12864_I2C trackArgs=0
+  //% inlineInputMode=inline
   export function showString(
     x: number,
     y: number,
@@ -253,8 +255,9 @@ namespace OLED12864_I2C {
    * @param color is number color, eg: 1
    */
   //% blockId="OLED12864_I2C_NUMBER" block="Afficher nombre x %x y %y nombre %num couleur %color"
- //% weight=80 blockGap=8 inlineInputMode=inline
+  //% weight=80 blockGap=8
   //% parts=OLED12864_I2C trackArgs=0
+  //% inlineInputMode=inline
   export function showNumber(
     x: number,
     y: number,
@@ -274,6 +277,7 @@ namespace OLED12864_I2C {
   //% blockId="OLED12864_I2C_HLINE" block="Tracer ligne horizontale x %x y %y longueur %len couleur %color"
   //% weight=71 blockGap=8
   //% parts=OLED12864_I2C trackArgs=0
+  //% inlineInputMode=inline
   export function hline(x: number, y: number, len: number, color: number = 1) {
     for (let i = x; i < x + len; i++) pixel(i, y, color);
   }
@@ -288,6 +292,7 @@ namespace OLED12864_I2C {
   //% blockId="OLED12864_I2C_VLINE" block="Tracer ligne verticale x %x y %y longueur %len couleur %color"
   //% weight=72 blockGap=8
   //% parts=OLED12864_I2C trackArgs=0
+  //% inlineInputMode=inline
   export function vline(x: number, y: number, len: number, color: number = 1) {
     for (let i = y; i < y + len; i++) pixel(x, i, color);
   }
@@ -303,6 +308,7 @@ namespace OLED12864_I2C {
   //% blockId="OLED12864_I2C_RECT" block="Tracer rectangle x1 %x1 y1 %y1 x2 %x2 y2 %y2 couleur %color"
   //% weight=73 blockGap=8
   //% parts=OLED12864_I2C trackArgs=0
+  //% inlineInputMode=inline
   export function rect(
     x1: number,
     y1: number,
@@ -395,6 +401,7 @@ namespace OLED12864_I2C {
   //% block="Tracer cercle x %x y %y rayon %r couleur %color"
   //% weight=70 blockGap=8
   //% parts=OLED12864_I2C trackArgs=0
+  //% inlineInputMode=inline
   export function outlinedCircle(x: number, y: number, r: number, color: number = 1) {
       const step = 1 / r;
       for (let theta = 0; theta < 2 * Math.PI; theta += step) {
@@ -413,6 +420,7 @@ namespace OLED12864_I2C {
   //% blockId="OLED12864_I2C_FILLEDCIRCLE"
   //% block="Tracer disque plein x %x y %y rayon %r couleur %color"
   //% parts=OLED12864_I2C trackArgs=0
+  //% inlineInputMode=inline
   export function filledCircle(x: number, y: number, r: number, color: number = 1) {
       for (let j = 0; j <= r; j++) {
           const step = 1 / j;
