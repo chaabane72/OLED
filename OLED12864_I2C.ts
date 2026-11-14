@@ -253,7 +253,7 @@ namespace OLED12864_I2C {
    * @param color is number color, eg: 1
    */
   //% blockId="OLED12864_I2C_NUMBER" block="Afficher nombre x %x y %y nombre %num couleur %color"
-  //% weight=80 blockGap=8
+ //% weight=80 blockGap=8 inlineInputMode=inline
   //% parts=OLED12864_I2C trackArgs=0
   export function showNumber(
     x: number,
